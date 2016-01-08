@@ -70,7 +70,7 @@ augroup railsPluginDetect
   autocmd FileType * if RailsDetect() | call rails#buffer_setup() | endif
 
   autocmd BufNewFile,BufReadPost *.yml.example set filetype=yaml
-  autocmd BufNewFile,BufReadPost *.rjs,*.rxml,*.builder,*.jbuilder,*.ruby
+  autocmd BufNewFile,BufReadPost *.rjs,*.rxml,*.builder,*.jbuilder,*.ruby,*.schema
         \ if &filetype !=# 'ruby' | set filetype=ruby | endif
   autocmd BufReadPost *.log if RailsDetect() | set filetype=railslog | endif
 

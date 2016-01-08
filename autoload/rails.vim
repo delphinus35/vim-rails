@@ -782,7 +782,7 @@ function! s:readable_calculate_file_type() dict abort
     let r = "spec"
   elseif f =~ '\<spec/support/.*\.rb'
     let r = "spec"
-  elseif f =~ '\<db/migrate\>'
+  elseif f =~ '\<db/migrate\>' || f =~ '.schema$'
     let r = "db-migration"
   elseif f=~ '\<db/schema\.rb$'
     let r = "db-schema"
